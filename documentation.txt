@@ -1,0 +1,19 @@
+GET /quiz/: This endpoint will return a list of all quizzes available in the system.
+
+POST /quiz/: This endpoint will allow the creation of a new quiz in the system.
+
+GET /quiz/{quiz_id}/: This endpoint will return details of a specific quiz identified by quiz_id.
+
+PUT /quiz/{quiz_id}/: This endpoint will allow the update of an existing quiz identified by quiz_id.
+
+DELETE /quiz/{quiz_id}/: This endpoint will allow the deletion of an existing quiz identified by quiz_id.
+
+GET /quiz/{quiz_id}/questions/: This endpoint will return a list of questions associated with the quiz identified by quiz_id.
+
+POST /quiz/{quiz_id}/questions/: This endpoint will allow the creation of a new question for the quiz identified by quiz_id.
+
+GET /quiz/{quiz_id}/questions/{question_id}/: This endpoint will return details of a specific question identified by question_id and associated with the quiz identified by quiz_id.
+
+PUT /quiz/{quiz_id}/questions/{question_id}/: This endpoint will allow the update of an existing question identified by question_id and associated with the quiz identified by quiz_id.
+
+DELETE /quiz/{quiz_id}/questions/{question_id}/: This endpoint will allow the deletion of an existing question identified by question_id and associated with the quiz identified by quiz_id.
