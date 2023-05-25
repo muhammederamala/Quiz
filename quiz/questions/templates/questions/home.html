@@ -1,0 +1,57 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<!-- <div>
+	<div class="container1">
+		<div class="row">
+			<h2> Create a new quiz </h2>
+			<form method="post" action="#">
+				{% csrf_token %}
+				<input type="text" class="classform" placeholder="Enter the subject" name="subject" id="subject">
+				<br>
+				<input type="text" class="classform"  placeholder="Enter the semester and branch. eg: CSE8" name="new_class" id="new_class">
+				<br>
+				<input type="text" class="classform" placeholder="Enter number of students" name="no_of_students" id="no_of_students">
+				<br>
+				<a href="#">
+  				<button class="button2" >
+      			<h4> Continue</h4>
+				</button>
+			</form>
+		</div>
+	</div>
+</div> -->
+
+
+  <form method="post" action="{% url 'add_quiz_view' %}">
+  {% csrf_token %}
+  <label for="question">Question:</label>
+  <input type="text" name="question" id="question" required>
+  <br>
+  <label for="option1">Option 1:</label>
+  <input type="text" name="option1" id="option1" required>
+  <br>
+  <label for="option2">Option 2:</label>
+  <input type="text" name="option2" id="option2" required>
+  <br>
+  <label for="option3">Option 3:</label>
+  <input type="text" name="option3" id="option3" required>
+  <br>
+  <label for="option4">Option 4:</label>
+  <input type="text" name="option4" id="option4" required>
+  <br>
+  <label for="rightAnswer">Correct Answer (Enter the option number):</label>
+  <input type="number" name="right_answer_index" id="rightAnswer" min="1" max="4" required>
+  <br>
+  <label for="startDate">Start Date and Time:</label>
+  <input type="datetime-local" name="start_date" id="startDate" required>
+  <br>
+  <label for="endDate">End Date and Time:</label>
+  <input type="datetime-local" name="end_date" id="endDate" required>
+  <br>
+  <button type="submit">Create Quiz</button>
+</form>
+
+
+{% endblock content %}
